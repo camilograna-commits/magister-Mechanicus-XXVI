@@ -227,7 +227,7 @@
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center mt-6">
                     <button id="btn-clemencia" onclick="sobornarAlCesar()" class="hidden px-6 py-3 bg-gradient-to-r from-yellow-600 to-roman-gold text-roman-dark font-extrabold rounded border-2 border-yellow-300 shadow-lg hover:scale-105 transition-transform">
-                        🏛️ Sobornar al César (15k HS)
+                        🏛️ Pedir Clemencia al César (15k HS)
                     </button>
                     <button onclick="reiniciarAventura()" class="px-6 py-3 bg-roman-red text-roman-stone font-bold rounded border border-roman-gold hover:bg-roman-gold hover:text-roman-dark transition-colors">
                         Nuevo Acueducto
@@ -607,15 +607,15 @@
                 document.getElementById('pantalla-juego').classList.remove('hidden');
                 document.getElementById('panel-recursos').classList.remove('hidden');
                 playSound('success');
-                mostrarAlertaImperial("¡El Emperador Trajano ha aceptado tu generoso soborno de 15,000 HS! Tu condena queda revocada.");
-                agregarBitacora(historia[estado.nodoActual].capitulo, "🏛️ Soborno Imperial pagado (15,000 HS).");
+                mostrarAlertaImperial("¡El Emperador Trajano ha aceptado tu generoso aporte de 15,000 HS! Tu condena queda revocada.");
+                agregarBitacora(historia[estado.nodoActual].capitulo, "🏛️ Aporte Imperial pagado (15,000 HS).");
             } else {
                 estado.presupuesto = 3000; estado.prestigio = 10; estado.estabilidad = Math.max(estado.estabilidad, 50); estado.plazo = Math.max(estado.plazo, 4);
                 document.getElementById('pantalla-final').classList.add('hidden');
                 document.getElementById('pantalla-juego').classList.remove('hidden');
                 document.getElementById('panel-recursos').classList.remove('hidden');
                 playSound('success');
-                mostrarAlertaImperial("¡Tus sestercios no alcanzan! Tu suegra soborna al César por ti. A cambio, confisca tu honor degradándote al 10% y te obliga a limpiar sus establos.");
+                mostrarAlertaImperial("¡Tus sestercios no alcanzan! Tu suegra soborna al César por ti. A cambio, confisca tu honor degradándote al y te obliga a limpiar sus establos.");
                 agregarBitacora(historia[estado.nodoActual].capitulo, "👵 Fianza pagada por tu suegra a cambio de tu honor.");
             }
             cargarNodo(estado.nodoActual); actualizarBarras();
